@@ -1,24 +1,35 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7a8790d4-c76e-45e9-a0ee-99487faa11c4" />
-📋 Description
- MiniEvent est une application web complète de gestion d'événements développée en PHP natif suivant l'architecture MVC. Elle permet aux administrateurs de créer et gérer des événements, tandis que les 
- visiteurs peuvent consulter les événements disponibles et effectuer des réservations en ligne.
-✨ Fonctionnalités:
-👥 Côté Visiteur
--🔍 Consultation des événements - Liste complète avec filtrage par statut (à venir/terminé)
--📄 Détails complets - Informations détaillées sur chaque événement
--🎟️ Réservation en ligne - Formulaire de réservation simple et intuitif
--📊 Disponibilité en temps réel - Affichage du nombre de places restantes
--🚫 Protection anti-doublon - Une seule réservation par email par événement
+# 🎫 MiniEvent
 
-🔐 Côté Administrateur
-📊 Tableau de bord - Vue d'ensemble avec statistiques (événements, réservations, etc.)
-➕ Gestion des événements - Création, modification, suppression
-🖼️ Upload d'images - Support des images pour chaque événement
-📋 Gestion des réservations - Consultation par événement
-📤 Export CSV - Exportation des listes de réservations
-🖨️ Impression - Fonction d'impression intégrée
+---
 
-📁 Architecture
+## 📋 Description
+
+**MiniEvent** est une application web complète de gestion d'événements développée en PHP natif suivant l'architecture MVC. Elle permet aux administrateurs de créer et gérer des événements, tandis que les visiteurs peuvent consulter les événements disponibles et effectuer des réservations en ligne.
+
+---
+
+## ✨ Fonctionnalités
+
+### 👥 Côté Visiteur
+- 🔍 **Consultation des événements** - Liste complète 
+- 📄 **Détails complets** - Informations détaillées sur chaque événement
+- 🎟️ **Réservation en ligne** - Formulaire de réservation simple et intuitif
+- 📊 **Disponibilité en temps réel** - Affichage du nombre de places restantes
+- 🚫 **Protection anti-doublon** - Une seule réservation par email par événement
+
+### 🔐 Côté Administrateur
+- 📊 **Tableau de bord** - Vue d'ensemble avec statistiques (événements, réservations, etc.)
+- ➕ **Gestion des événements** - Création, modification, suppression
+- 🖼️ **Upload d'images** - Support des images pour chaque événement
+- 📋 **Gestion des réservations** - Consultation par événement
+- 📤 **Export CSV** - Exportation des listes de réservations
+- 🖨️ **Impression** - Fonction d'impression intégrée
+
+---
+
+## 📁 Architecture
+
+```
 MiniEvent/
 ├── 📂 app/
 │   ├── 📂 controllers/
@@ -47,18 +58,20 @@ MiniEvent/
 │           └── footer.php           # Pied de page commun
 │
 ├── 📂 config/
-│   ├── database.php                 # Configuration BDD (Singleton)
+│   ├── database.php                 # Configuration BDD (myPhpAdmin-xampp)
 │   └── routes.php                   # Routage de l'application
 │
 ├── 📂 public/
 │   ├── 📂 css/
 │   │   └── style.css               # Styles principaux
 │   ├── 📂 js/
-│   │   └── script.js               # Scripts JavaScript
-│   ├── 📂 uploads/                  # Images uploadées
+│   │   └── script.js               # Scripts JavaScript                
 │   └── index.php                    # Point d'entrée
 │
 └── README.md
+```
+
+---
 
 📸 Captures d'écran
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/07fa61ae-f9d7-46ad-a68b-f635d03972c3" />
@@ -80,16 +93,4 @@ MiniEvent/
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4680fdc5-e72c-4b0c-b7e0-445b34bb8ec1" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/efd3b233-7054-4239-8b19-1ffbb2c2d4bf" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e1686c50-6cb1-4f8f-a648-52e707ed683d" />
-
-
-
-
-
-
-
-
-
-
-
-
 
