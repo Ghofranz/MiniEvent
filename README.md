@@ -1,4 +1,5 @@
 # 🎫 MiniEvent
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/069b124a-8485-456d-bcea-8f9cb86ba747" />
 
 ---
 
