@@ -2,9 +2,6 @@
 
 **Plateforme moderne de gestion et réservation d'événements**
 
-[Fonctionnalités](#-fonctionnalités) • [Installation](#-installation) • [Architecture](#-architecture) • [Technologies](#-technologies)
-
-</div>
 
 ---
 
