@@ -27,6 +27,17 @@
 
 ---
 
+## 🛠️ Technologies
+
+| Catégorie | Technologies |
+|-----------|-------------|
+| **Backend** | PHP 8.0+, PDO |
+| **Base de données** | MySQL 5.7+ / MariaDB |
+| **Gestion BDD** | phpMyAdmin |
+| **Serveur local** | XAMPP / WAMP / MAMP |
+| **Frontend** | HTML5, CSS3, JavaScript (Vanilla) |
+
+---
 ## 📁 Architecture
 
 ```
@@ -93,4 +104,128 @@ MiniEvent/
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4680fdc5-e72c-4b0c-b7e0-445b34bb8ec1" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/efd3b233-7054-4239-8b19-1ffbb2c2d4bf" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e1686c50-6cb1-4f8f-a648-52e707ed683d" />
+---
 
+## 🚀 Installation
+
+### Prérequis
+
+- **XAMPP** / **WAMP** / **MAMP** (inclut PHP, MySQL et phpMyAdmin)
+- PHP 8.0 ou supérieur
+- MySQL 5.7+ ou MariaDB
+
+### Étapes d'installation
+
+#### 1. Installer XAMPP
+
+Télécharger et installer XAMPP depuis [apachefriends.org](https://www.apachefriends.org/)
+
+#### 2. Cloner/Copier le projet
+
+Copier le dossier du projet dans le répertoire `htdocs` de XAMPP :
+```
+C:\xampp\htdocs\minievent\
+```
+
+#### 3. Démarrer les services
+
+Ouvrir le **XAMPP Control Panel** et démarrer :
+- ✅ **Apache**
+- ✅ **MySQL**
+
+#### 4. Créer la base de données avec phpMyAdmin
+![alt text](image.png)
+
+1. Ouvrir phpMyAdmin : `http://localhost/phpmyadmin`
+
+2. Cliquer sur **"Nouvelle base de données"**
+
+3. Nom de la base : `minievent`
+
+4. Interclassement : `utf8mb4_unicode_ci`
+
+5. Cliquer sur **"Créer"**
+
+#### 5. Importer les tables
+
+Dans phpMyAdmin, sélectionner la base `minievent`, puis aller dans l'onglet **SQL** et exécuter :
+
+```sql
+-- Table des administrateurs
+CREATE TABLE admin (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Table des événements
+CREATE TABLE events (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    event_date DATE,
+    event_time TIME,
+    location VARCHAR(255),
+    seats INT DEFAULT 25,
+    image VARCHAR(255) DEFAULT 'default.jpg',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Table des réservations
+CREATE TABLE reservations (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    event_id INT NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(20),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (event_id) REFERENCES events(id) ON DELETE CASCADE,
+    UNIQUE KEY unique_reservation (event_id, email)
+);
+
+-- Créer un admin par défaut (mot de passe: admin123)
+INSERT INTO admin (username, password_hash) 
+VALUES ('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');
+```
+![alt text](image-1.png)
+![alt text](image-2.png)
+```
+
+#### 6. Configurer la connexion
+
+Modifier le fichier `config/database.php` selon votre configuration :
+
+```php
+private $host = "127.0.0.1";
+private $port = "3306";        // Port MySQL (3306 par défaut, 3307 si conflit)
+private $db_name = "minievent";
+private $username = "root";
+private $password = "";        // Vide par défaut sur XAMPP
+```
+
+#### 7. Lancer l'application
+
+**Option A - Via XAMPP (Apache) :**
+```
+http://localhost/minievent/public/
+```
+
+**Option B - Via PHP built-in server :**
+```bash
+cd C:\xampp\htdocs\minievent\public
+php -S localhost:8000
+```
+Puis accéder à `http://localhost:8000`
+
+#### 8. Connexion admin
+
+- **URL** : `http://localhost:8000/admin/login`
+- **Utilisateur** : `admin`
+- **Mot de passe** : `admin123`
+
+---
+ ✨Equipe de travaille:
+
+ -Ghofran Zouaghi 
+ -Eya hedhili
