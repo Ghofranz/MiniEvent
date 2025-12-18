@@ -1,3 +1,66 @@
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7a8790d4-c76e-45e9-a0ee-99487faa11c4" />
+📋 Description
+ MiniEvent est une application web complète de gestion d'événements développée en PHP natif suivant l'architecture MVC. Elle permet aux administrateurs de créer et gérer des événements, tandis que les 
+ visiteurs peuvent consulter les événements disponibles et effectuer des réservations en ligne.
+✨ Fonctionnalités:
+👥 Côté Visiteur
+-🔍 Consultation des événements - Liste complète avec filtrage par statut (à venir/terminé)
+-📄 Détails complets - Informations détaillées sur chaque événement
+-🎟️ Réservation en ligne - Formulaire de réservation simple et intuitif
+-📊 Disponibilité en temps réel - Affichage du nombre de places restantes
+-🚫 Protection anti-doublon - Une seule réservation par email par événement
+
+🔐 Côté Administrateur
+📊 Tableau de bord - Vue d'ensemble avec statistiques (événements, réservations, etc.)
+➕ Gestion des événements - Création, modification, suppression
+🖼️ Upload d'images - Support des images pour chaque événement
+📋 Gestion des réservations - Consultation par événement
+📤 Export CSV - Exportation des listes de réservations
+🖨️ Impression - Fonction d'impression intégrée
+
+📁 Architecture
+MiniEvent/
+├── 📂 app/
+│   ├── 📂 controllers/
+│   │   ├── AdminController.php      # Gestion admin (dashboard, CRUD events)
+│   │   ├── EventController.php      # Affichage des événements
+│   │   └── ReservationController.php # Gestion des réservations
+│   │
+│   ├── 📂 models/
+│   │   ├── Admin.php                # Modèle administrateur
+│   │   ├── Event.php                # Modèle événement
+│   │   └── Reservation.php          # Modèle réservation
+│   │
+│   └── 📂 views/
+│       ├── 📂 admin/
+│       │   ├── dashboard.php        # Tableau de bord
+│       │   ├── form_event.php       # Formulaire création/édition
+│       │   ├── login.php            # Page de connexion
+│       │   └── reservations.php     # Liste des réservations
+│       │
+│       ├── 📂 events/
+│       │   ├── details.php          # Détails d'un événement
+│       │   └── list.php             # Liste des événements
+│       │
+│       └── 📂 partials/
+│           ├── header.php           # En-tête commun
+│           └── footer.php           # Pied de page commun
+│
+├── 📂 config/
+│   ├── database.php                 # Configuration BDD (Singleton)
+│   └── routes.php                   # Routage de l'application
+│
+├── 📂 public/
+│   ├── 📂 css/
+│   │   └── style.css               # Styles principaux
+│   ├── 📂 js/
+│   │   └── script.js               # Scripts JavaScript
+│   ├── 📂 uploads/                  # Images uploadées
+│   └── index.php                    # Point d'entrée
+│
+└── README.md
+
+📸 Captures d'écran
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/07fa61ae-f9d7-46ad-a68b-f635d03972c3" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f739f30d-698a-45d2-901e-1df8ca9d7f6a" />
  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/04fb72c3-7fdf-4d28-a343-813140e9d473" />
