@@ -95,3 +95,9 @@ MiniEvent/
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/efd3b233-7054-4239-8b19-1ffbb2c2d4bf" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e1686c50-6cb1-4f8f-a648-52e707ed683d" />
 
+ ---
+
+ ✨Equipe de travaille:
+
+ -Ghofran Zouaghi 
+ -Eya hedhili
