@@ -190,7 +190,7 @@ VALUES ('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi')
 ```
 ![alt text](image-1.png)
 ![alt text](image-2.png)
-```
+
 
 #### 6. Configurer la connexion
 
