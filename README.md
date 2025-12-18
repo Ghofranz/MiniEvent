@@ -134,7 +134,7 @@ Ouvrir le **XAMPP Control Panel** et démarrer :
 - ✅ **MySQL**
 
 #### 4. Créer la base de données avec phpMyAdmin
-![alt text](image.png)
+<img width="1232" height="379" alt="image" src="https://github.com/user-attachments/assets/06ebd1fb-47d1-4291-b820-da44bfa16948" />
 
 1. Ouvrir phpMyAdmin : `http://localhost/phpmyadmin`
 
@@ -188,8 +188,9 @@ CREATE TABLE reservations (
 INSERT INTO admin (username, password_hash) 
 VALUES ('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');
 ```
-![alt text](image-1.png)
-![alt text](image-2.png)
+
+<img width="1388" height="471" alt="image" src="https://github.com/user-attachments/assets/97efdedd-a50b-45aa-94e1-19d7f040c760" />
+<img width="1159" height="495" alt="image" src="https://github.com/user-attachments/assets/945488a0-ba4f-40a1-adae-7dc016597781" />
 
 
 #### 6. Configurer la connexion
